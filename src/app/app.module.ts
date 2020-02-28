@@ -8,19 +8,31 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FilterSearchPipe } from './shared/filter-search.pipe';
 import { SearchBoxComponent } from './search-box/search-box.component';
+import { BookTableComponent } from './book-table/book-table.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     FilterSearchPipe,
-    SearchBoxComponent
+    SearchBoxComponent,
+    BookTableComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
